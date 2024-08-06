@@ -5,6 +5,8 @@ info:
 paths:
   /api/login:
     post:
+      security:
+        - basicAuth: []
       responses:
         '200':
           description: User is logged in
@@ -17,3 +19,10 @@ paths:
                     type: string
         '400':
           description: Incorrect username or password
+
+
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
