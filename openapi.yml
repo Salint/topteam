@@ -1,0 +1,19 @@
+openapi: 3.0.3
+info:
+  title: TopTeam API Specs
+  version: 1.0.0
+paths:
+  /api/login:
+    post:
+      responses:
+        '200':
+          description: User is logged in
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+        '400':
+          description: Incorrect username or password
